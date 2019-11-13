@@ -39,6 +39,91 @@
         color: white;
     }
 
+    #myImg {
+  cursor: pointer;
+  transition: 0.3s;
+}
+<!-- My new stuff!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
 </style>
 
 <body class="w3-light-grey w3-content" style="max-width:1600px">
@@ -107,9 +192,7 @@
                 <div class="w3-container w3-center">
                     <p>Vacation Feet</p>
                 </div>
-                <a href="https://medium.com/nightingale/why-you-should-close-the-computer-for-your-next-data-visualization-3636663d0b35" target="_blank">
-                    <img src="miles.png" style="width:100%" class="w3-hover-opacity">
-                </a>
+                    <img id="myImg" src="miles.jpeg" style="width:100%" class="w3-hover-opacity">
             </div>
             <div class="w3-half w3-container w3-margin-bottom">
                 <div class="w3-container w3-center">
@@ -133,14 +216,47 @@
             </div>
         </div>
 
+        <!-- My new stuff!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
+
+      <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var img = document.getElementById("myImg");
+      var modalImg = document.getElementById("img01");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      }
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      </script>
+
         <!-- Modal for full size images on click-->
-        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+        <!-- <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
             <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
             <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
                 <img id="img01" class="w3-image">
                 <p id="caption"></p>
             </div>
-        </div>
+        </div> -->
+
 
         <!-- About section -->
         <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
