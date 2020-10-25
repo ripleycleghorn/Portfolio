@@ -1,330 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Portfolio</title>
+<title>Ripley Cleghorn</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    p {
-        font-family: "Raleway", sans-serif
-    }
-
-    .fa {
-        padding: 20px;
-        font-size: 30px;
-        width: 50px;
-        text-align: center;
-        text-decoration: none;
-        margin: 5px 2px;
-    }
-
-    .fa:hover {
-        opacity: 0.7;
-    }
-
-    .fa-twitter {
-        background: #55ACEE;
-        color: white;
-    }
-
-    .fa-linkedin {
-        background: #007bb5;
-        color: white;
-    }
-
-    #myImg {
-  cursor: pointer;
-  transition: 0.3s;
-}
-<!-- My new stuff!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-#myImg:hover {opacity: 0.7;}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-third img{cursor: pointer}
+/* quick reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-/* Modal Content (image) */
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 100%;
-  max-width: 700px;
+/* relevant styles */
+.img__wrap {
+  position: relative;
+  cursor: pointer
 }
 
-/* Caption of Modal Image */
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
-
-/* Add Animation */
-.modal-content, #caption {
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)}
-  to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
-}
-
-/* The Close Button */
-.close {
+.img__description {
   position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
 }
 
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
+.img__wrap:hover .img__description {
+  visibility: visible;
+  opacity: 1;
 }
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-  .modal-content {
-    width: 100%;
-  }
-}
-
 </style>
-
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
-    <!-- Sidebar/menu -->
-    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar">
-        <br>
-        <div class="w3-container">
-            <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
-                <i class="fa fa-remove"></i>
-            </a>
-            <!-- <img src="me.jpg" style="width:45%;" class="w3-round"> -->
-            <br>
-            <br>
-            <h4><b>Ripley Cleghorn</b></h4>
-        </div>
-        <div class="w3-bar-block">
-            <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a>
-            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
-            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
-        </div>
-    </nav>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+  <h3 class="w3-padding-64 w3-center" style="color: black;"><b>Ripley<br>Cleghorn</b></h3>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">PORTFOLIO</a> 
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a> 
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  <!-- <div class="w3-third w3-center">
+    <a href="https://twitter.com/ripley_cleghorn" target="_blank" class="fa fa-twitter"></a>
+    <a href="https://www.linkedin.com/in/ripley-cleghorn/" target="_blank" class="fa fa-linkedin"></a>
+    </div> -->
+</nav>
 
-    <!-- Overlay effect when opening sidebar on small screens -->
-    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">Ripley Cleghorn</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
 
-    <!-- !PAGE CONTENT! -->
-    <div class="w3-main" style="margin-left:300px">
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-        <!-- Header -->
-        <header id="portfolio">
-            <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-            <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-            <div class="w3-container">
-                <h1><b>Portfolio</b></h1>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Push down content on small screens --> 
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Photo grid -->
+  <h2>Portfolio</h2>
+  <div class="w3-row">
+    <div class="w3-third">
+        <div class="img__wrap">
+            <a href="https://ripleycleghorn.github.io/abortion_access/" target="_blank"><img class="img__img" src="abortion-01.png" style="width:100%" alt="Abortion Access Project"></a>
+            <p class="img__description">An interactive visualization exploring abortion access accross the United States.</p>
             </div>
-        </header>
-
-        <!-- Push down content on small screens -->
-        <div class="w3-hide-large" style="margin-top:83px"></div>
-
-        <!-- First Photo Grid-->
-        <div class="w3-row-padding">
-          <div class="w3-half w3-container w3-margin-bottom">
-            <div class="w3-container w3-center">
-                <p>Tupelo Press</p>
-                <img id="myImg" src="sunburst_font.png" style="width:100%" class="w3-hover-opacity">
-            </div>
-          </div>
-            <div class="w3-half w3-container w3-margin-bottom">
-                <div class="w3-container w3-center">
-                  <p>Tupelo Press</p>
-                  <img id="myImg" src="v5.png" style="width:100%" class="w3-hover-opacity">
+            <div class="img__wrap">
+                <a href="https://ripleycleghorn.github.io/msdv-major-studio/assignment_01d/" target="_blank"><img class="img__img" src="quipu.png" style="width:100%" alt="Abortion Access Project"></a>
+                <p class="img__description">This infographic illustrates one of the objects from the Smithsonian, as part of my Major Studio course.</p>
                 </div>
-            </div>
+        <div class="img__wrap">
+            <a href="https://ripleycleghorn.github.io/msdv-info-aesthetics/assignment2/" target="_blank"><img class="img__img" src="earthquake.png" style="width:100%" alt="Earthquake project"></a>
+            <p class="img__description">This chart was created in d3.js as part of my Information Aesthetics course. It is intended for a young audience, as a way to introduce them to a bar chart and let them explore the magnitude of the most recent earthquakes.</p>
         </div>
-
-
-        <!-- Second Photo Grid-->
-        <div class="w3-row-padding">
-          <div class="w3-half w3-container w3-margin-bottom">
-              <div class="w3-container w3-center">
-                  <p>Asylum Seekers in Sweden, CGDV Hackathon</p>
-                  <a href="https://www.centerforglobaldata.org/visual?id=272" target="_blank">
-                      <img src="refugee-01.png" style="width:100%" class="w3-hover-opacity">
-                  </a>
-              </div>
-          </div>
-          <div class="w3-half w3-container w3-margin-bottom">
-            <div class="w3-container w3-center">
-                <p>Abortion Access, USA</p>
-                <a href="https://ripleycleghorn.github.io/abortion_access/" target="_blank">
-                    <img src="abortion-01.png" style="width:100%" class="w3-hover-opacity">
-                </a>
-            </div>
-          </div>
-        </div>
-        <!-- Third Photo Grid-->
-        <div class="w3-row-padding">
-          <div class="w3-half w3-container w3-margin-bottom">
-              <div class="w3-container w3-center">
-                  <p>Vacation Feet</p>
-                  <a href="https://medium.com/nightingale/why-you-should-close-the-computer-for-your-next-data-visualization-3636663d0b35" target="_blank">
-                      <img src="miles.png" style="width:100%" class="w3-hover-opacity">
-                  </a>
-              </div>
-          </div>
-        </div>
-
-        <!-- My new stuff!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-
-      <!-- The Modal -->
-      <div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
-        <div id="caption"></div>
-      </div>
-
-      <script>
-      // Get the modal
-      var modal = document.getElementById("myModal");
-
-      // Get the image and insert it inside the modal - use its "alt" text as a caption
-      var img = document.getElementById("myImg");
-      var modalImg = document.getElementById("img01");
-      var captionText = document.getElementById("caption");
-      img.onclick = function(){
-        modal.style.display = "block";
-        modalImg.src = this.src;
-        captionText.innerHTML = this.alt;
-      }
-
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
-
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function() {
-        modal.style.display = "none";
-      }
-      </script>
-
-        <!-- Modal for full size images on click-->
-        <!-- <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-            <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
-            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-                <img id="img01" class="w3-image">
-                <p id="caption"></p>
-            </div>
-        </div> -->
-
-
-        <!-- About section -->
-        <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
-            <h4><b>About</b></h4>
-            <!-- <img src="/w3images/avatar_hat.jpg" alt="Me" class="w3-image w3-padding-32" width="600" height="650"> -->
-            <div class="w3-content w3-left-align" style="max-width:300px">
-                <p>Ripley Cleghorn is a data visualization designer with a passion for complex storytelling and creating elegant visuals. She combines analytical and design skills to bring data to life.
-                </p>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <!-- Add icon library -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <footer class="w3-container w3-padding-32 w3-grey">
-            <div class="w3-row-padding">
-                <div class="w3-third">
-                    <h3 id="contact">Contact</h3>
-                    <p>ripley.cleghorn@gmail.com</p>
-                </div>
-
-                <div class="w3-third">
-                    <h3>Blog</h3>
-                    <ul class="w3-ul">
-                        <li class="w3-padding-5">
-                            <a href="https://medium.com/nightingale/why-you-should-close-the-computer-for-your-next-data-visualization-3636663d0b35">
-                                <img src="miles.png" class="w3-left w3-margin-right" style="width:50px">
-                                <span class="w3-large">Why You Should Close The Computer For Your Next Dataviz</span>
-                                <br>
-                                <span>And How To Unleash Creativity</span>
-                        </li>
-                        <li class="w3-padding-5">
-                            <a href="https://medium.com/nightingale/finding-comfort-in-uncertainty-90c2181feae1">
-                                <img src="panel.jpeg" class="w3-left w3-margin-right" style="width:50px">
-                                <span class="w3-large">Finding Comfort in Uncertainty</span>
-                                <br>
-                                <span>Reflections on a data visualization panel discussion</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="w3-third w3-center">
-                <a href="https://twitter.com/ripley_cleghorn" target="_blank" class="fa fa-twitter"></a>
-                <a href="https://www.linkedin.com/in/ripley-cleghorn/" target="_blank" class="fa fa-linkedin"></a>
-                </div>
-            </div>
-        </footer>
-
-        <!-- End page content -->
     </div>
 
-    <script>
-        // Script to open and close sidebar
-        function w3_open() {
-            document.getElementById("mySidebar").style.display = "block";
-            document.getElementById("myOverlay").style.display = "block";
-        }
+    <div class="w3-third">
+        <div class="img__wrap">
+            <img src="tupelo1.png" style="width:100%" onclick="onClick(this)" alt="Project for Tupelo Press">
+            <p class="img__description">This graphic was created for Tupelo Press, and illustrates the cycle of a book, focusing on distribution by independent literary presses</p>
+            </div>
+        <div class="img__wrap">
+            <img src="311.png" style="width:100%" onclick="onClick(this)" alt="311">
+            <p class="img__description">This visualization explores the effect of quarantine on 311 noise-related calls reported by the NYPD.</p>
+            </div>
+    </div>
+    
+    <div class="w3-third">
+        <div class="img__wrap">
+            <img src="refugee.png" style="width:100%" style="height:100%" onclick="onClick(this)" alt="Refugees in Sweden">
+            <p class="img__description">This timeline was part of the CGDV hackathon</p>
+            </div>
+    </div>
+  </div>
 
-        function w3_close() {
-            document.getElementById("mySidebar").style.display = "none";
-            document.getElementById("myOverlay").style.display = "none";
-        }
+  <!-- Pagination
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div> -->
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
 
-        // Modal Image Gallery
-        function onClick(element) {
-            document.getElementById("img01").src = element.src;
-            document.getElementById("modal01").style.display = "block";
-            var captionText = document.getElementById("caption");
-            captionText.innerHTML = element.alt;
-        }
-    </script>
+  <!-- About section -->
+  <div class="w3-container w3-center w3-text-light-grey w3-padding-32" id="about" style="background: rgba(29, 106, 154, 0.72);">
+    <img src="me.jpeg" alt="Me" class="w3-image w3-padding-32" width="400" height="450">
+    <div class="w3-content w3-left-align" style="max-width:600px">
+      <h4>About Me</h4>
+      <p>Ripley Cleghorn is a data visualization designer with a passion for complex storytelling and creating elegant visuals. She combines analytical and design skills to bring data to life.
+      </p><br>
+      <p>Contact: ripley.cleghorn@gmail.com</p><br>
+   </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey"> 
+    <h3>BLOG POSTS</h3> 
+    <div class="w3-row-padding">
+        <div class="w3-third">
+            <ul class="w3-ul">
+                <li class="w3-padding-5">
+                    <a href="https://medium.com/nightingale/why-you-should-close-the-computer-for-your-next-data-visualization-3636663d0b35">
+                        <img src="miles.png" class="w3-left w3-margin-right" style="width:100px">
+                        <span class="w3-large">Why You Should Close The Computer For Your Next Dataviz</span>
+                        <br>
+                        <span>And How To Unleash Creativity</span>
+                </li>
+            </ul>
+          </div>
+        <div class="w3-third">
+        <ul class="w3-ul">
+            <li class="w3-padding-5">
+                <a href="https://medium.com/nightingale/what-coronavirus-has-to-do-with-earth-day-e5708fb8a646">
+                    <img src="earthday.png" class="w3-left w3-margin-right" style="width:100px">
+                    <span class="w3-large">What Coronavirus Has to Do With Earth Day</span>
+                    <br>
+                    <span>Celebrating Earth Day doesn’t have to be divorced from the pressing global crisis we face. In fact, the two are uniquely intertwined.</span>
+            </li>
+        </ul>
+      </div>
+      <div class="w3-third">
+        <ul class="w3-ul">
+            <li class="w3-padding-5">
+                <a href="https://medium.com/nightingale/why-you-should-close-the-computer-for-your-next-data-visualization-3636663d0b35">
+                    <img src="panel.jpeg" class="w3-left w3-margin-right" style="width:100px">
+                    <span class="w3-large">Finding Comfort in Uncertainty</span>
+                    <br>
+                    <span>Reflections on a data visualization panel discussion</span>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="w3-third w3-center">
+    <a href="https://twitter.com/ripley_cleghorn" target="_blank" class="fa fa-twitter"></a>
+    <a href="https://www.linkedin.com/in/ripley-cleghorn/" target="_blank" class="fa fa-linkedin"></a>
+    </div>
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
 
 </body>
-
 </html>
