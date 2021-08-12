@@ -1,0 +1,194 @@
+main {
+    display: grid;
+    grid-template-rows: repeat(82, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+    /* background: linear-gradient(90deg, rgba(217,132,163,1) 35%, rgba(242,213,229,1) 100%); */
+}
+
+div {
+	/* border: 1px solid blue; */
+    
+}
+
+#title {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-style: medium;
+    padding: 20px;
+    padding-left: 40px;
+    color: #D984A3;
+}
+
+#hi {
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+#website-header, #static-header, #contact-header {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-style: medium;
+    color: #004878;
+    text-align: center;
+}
+
+#website-header {
+    grid-column: 6 / span 1;
+    grid-row: 1 / span 1;
+}
+
+#static-header {
+    grid-column: 7 / span 1;
+    grid-row: 1 / span 1;
+}
+
+#contact-header {
+    grid-column: 8 / span 1;
+    grid-row: 1 / span 1;
+}
+
+#blurb {
+    grid-column: 4 / span 2;
+    grid-row: 4 / span 3;
+    padding: 10px;
+    font-family: 'Raleway', sans-serif;
+    /* text-align: justify; */
+}
+
+#divider {
+    grid-column: 1 / span 8;
+    grid-row: 7 / span 1;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-family: 'Raleway', sans-serif;
+    border-top: 1px dashed lightblue;
+}
+
+#work-title {
+    grid-column: 1 / span 8;
+    grid-row: 8 / span 1;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+#interactive, #static {
+    font-family: 'Playfair Display', serif;
+    /* padding: 10px; */
+    font-size: 20px;
+    color: #004878;
+    text-align: center;
+}
+
+#interactive{
+    grid-column: 1 / span 8;
+    grid-row: 9 / span 1;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: .3fr repeat(5, 1fr);
+    padding: 5px;
+}
+
+/* leave the first ad last row blank for each project grid*/
+.project-title {
+    grid-column: 1 / span 5;
+    grid-row: 2 / span 1;
+    padding: 10px;
+    font-size: 25px;
+    font-family: 'Playfair Display', serif;
+}
+
+.project-description {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+.project-image {
+    grid-column: 1 / span 5;
+    grid-row: 3 / span 3;
+    -webkit-box-shadow: -3px 5px 12px -2px #000000; 
+    box-shadow: -3px 5px 12px -2px #000000;
+}
+
+.alt-project-title {
+    grid-column: 4 / span 5;
+    grid-row: 2 / span 1;
+    padding: 10px;
+    font-size: 25px;
+    font-family: 'Playfair Display', serif;
+}
+
+.alt-project-description {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+.alt-project-image {
+    grid-column: 4 / span 5;
+    grid-row: 3 / span 3;
+    -webkit-box-shadow: 3px 5px 12px -2px #000000; 
+    box-shadow: 3px 5px 12px -2px #000000;
+}
+
+/* FIRST PROJECT */
+
+#thesis {
+    grid-column: 1 / span 8;
+    grid-row: 10 / span 10;
+}
+
+#sally {
+    grid-column: 1 / span 8;
+    grid-row: 20 / span 10;
+}
+
+#quipu {
+    grid-column: 1 / span 8;
+    grid-row: 30 / span 10;
+}
+
+#voters {
+    grid-column: 1 / span 8;
+    grid-row: 40 / span 10;
+}
+
+#static {
+    grid-column: 1 / span 8;
+    grid-row: 50 / span 1;
+}
+
+#accidents {
+    grid-column: 1 / span 8;
+    grid-row: 51 / span 10;
+}
+
+#calls {
+    grid-column: 1 / span 8;
+    grid-row: 61 / span 10;
+}
+
+#sweden {
+    grid-column: 1 / span 8;
+    grid-row: 71 / span 10;
+}
+
+#contact {
+    grid-column: 1 / span 8;
+    grid-row: 81 / span 3;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    padding-top: 15px;
+    padding-right: 20px;
+    text-align: right;
+}
+
+#email {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}

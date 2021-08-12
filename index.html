@@ -1,292 +1,134 @@
-<!DOCTYPE html>
 <html lang="en">
-<title>Ripley Cleghorn</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<style>
-  body,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    font-family: "Raleway", sans-serif
-  }
 
-  .w3-third img {
-    cursor: pointer
-  }
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ripley Cleghorn - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
 
-  /* quick reset */
-  * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-  }
-
-  /* relevant styles */
-  .img__wrap {
-    position: relative;
-    /* cursor: pointer */
-  }
-
-  .img__description {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(29, 106, 154, 0.72);
-    color: #fff;
-    visibility: hidden;
-
-    /* transition effect. not necessary */
-    transition: opacity .2s, visibility .2s;
-  }
-
-  .img__wrap:hover .img__description {
-    visibility: visible;
-    opacity: 1;
-  }
-</style>
-
-<body class="w3-light-grey w3-content" style="max-width:1600px">
-
-  <!-- Sidebar/menu -->
-  <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center"
-    style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
-    <h3 class="w3-padding-64 w3-center" style="color: black;"><b>Ripley<br>Cleghorn</b></h3>
-    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">PORTFOLIO</a>
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-    <!-- <div class="w3-third w3-center">
-    <a href="https://twitter.com/ripley_cleghorn" target="_blank" class="fa fa-twitter"></a>
-    <a href="https://www.linkedin.com/in/ripley-cleghorn/" target="_blank" class="fa fa-linkedin"></a>
-    </div> -->
-  </nav>
-
-  <!-- Top menu on small screens -->
-  <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
-    <span class="w3-left w3-padding">Ripley Cleghorn</span>
-    <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
-  </header>
-
-  <!-- Overlay effect when opening sidebar on small screens -->
-  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
-    title="close side menu" id="myOverlay"></div>
-
-  <!-- !PAGE CONTENT! -->
-  <div class="w3-main" style="margin-left:300px">
-
-    <!-- Push down content on small screens -->
-    <div class="w3-hide-large" style="margin-top:83px"></div>
-
-    <!-- Photo grid -->
-    <h3 style="margin-left: 10px">Portfolio</h3>
-    <div class="w3-row">
-      <div class="w3-third">
-        <div class="img__wrap">
-          <img src="scaling.png" style="width:100%">
-          <p class="img__description">My thesis dives into the need to reconsider Negative Emissions Technologies.
-            <a href="https://ripleycleghorn.github.io/thesis/project-code/" target="_blank">
-              <img class="img__img" src="scaling.png" style="width:100%" alt="Thesis Project">
+<body>
+    <main>
+        <div id="title">Ripley Cleghorn</div>
+        <a id="website-header" href="#interactive">Webpages</a>
+        <a id="static-header" href="#static">Static Visuals</a>
+        <a id="contact-header" href="#contact">Contact</a>
+        <div id="blurb"><span id="hi">Hi!</span>  I'm a data visualization designer with a passion for weaving storytelling into
+            elegant visuals. I completed my Master's in Data Visualization in May of this year at <a target="_blank" href="https://parsons.nyc/thesis/#/">Parson's School of Design</a>. Feel free to reach out to me with any questions or if you are interested in collaborating!</div>
+        <div id="divider"></div>
+        <div id="work-title">Work</div>
+        <div id="interactive">Websites and interactive visuals</div>
+        <div class="project" id="thesis">
+            <div class="project-title">Scaling Down to Zero: The Need to Reconsider Negative
+                <p class="project-description">
+                    My thesis visualized the main limits to, and unknowns of, scaling up one specific
+                    Negative Emissions Technology (NET) referred to as Bioenergy with Carbon Capture and Storage
+                    (BECCS).</p>
+                <a target="_blank" href="https://github.com/ripleycleghorn/thesis">
+                    <img src="images/github.png" alt="Github icon" width="3%">
+                </a>
+            </div>
+            <div class="project-image">
+                <a href="https://ripleycleghorn.github.io/msdv-major-studio/assignment_03a/" target="_blank">
+                    <img src="images/scaling.png" alt="Thesis" width="100%">
+                </a>
+            </div>
+        </div>
+        <div class="project" id="sally">
+            <div class="alt-project-title">The Life of Sally Ride <p class="alt-project-description">This project is a
+                    visual biography of the life of the first American woman to go to space, Sally Ride. It focuses on
+                    her first mission in detail, and incorporates other parts of her life in a condensed manner. This
+                    project used the Smithsonian open access API.</p>
+                <a target="_blank"
+                    href="https://github.com/ripleycleghorn/msdv-major-studio/tree/master/assignment_03a">
+                    <img src="images/github.png" alt="Github icon" width="3%">
+                </a>
+            </div>
+            <div class="alt-project-image">
+                <a href="https://ripleycleghorn.github.io/msdv-major-studio/assignment_03a/" target="_blank">
+                    <img src="images/sally.png" alt="Sally Ride" width="100%">
+                </a>
+            </div>
+        </div>
+        <div class="project" id="quipu">
+            <div class="project-title">Counting Quipu: The Ancient Data Collection Devices<p
+                    class="project-description">This visualization is a graphical representation of one of the Quipu in
+                    the Smithsonian collection. Quipu (also written Khipu) were an ancient record keeping device created
+                    in Central and South America by indigenous Andeans, prior to Spanish colonization.</p>
+                <a target="_blank"
+                    href="https://github.com/ripleycleghorn/msdv-major-studio/tree/master/assignment_01d">
+                    <img src="images/github.png" alt="Github icon" width="3%">
+                </a>
+            </div>
+            <div class="project-image">
+                <a href="https://ripleycleghorn.github.io/msdv-major-studio/assignment_01d/" target="_blank">
+                    <img src="images/quipu.png" alt="Quipu" width="100%">
+                </a>
+            </div>
+        </div>
+        <div class="project" id="voters">
+            <div class="alt-project-title">Why Do Nonvoters Not Vote?<p class="alt-project-description">This
+                    visualization outlines main reasons people have for not voting, according to data published by The
+                    Pew Research Center.</p>
+                <a target="_blank"
+                    href="https://github.com/ripleycleghorn/msdv-info-aesthetics/tree/master/assignment3">
+                    <img src="images/github.png" alt="Github icon" width="3%">
+                </a>
+            </div>
+            <div class="alt-project-image">
+                <a href="https://ripleycleghorn.github.io/msdv-info-aesthetics/assignment3/" target="_blank">
+                    <img src="images/voters.png" alt="Voters" width="100%">
+                </a>
+            </div>
+        </div>
+        <div class="section-title" id="static">Static and stand-alone visuals</div>
+        <div class="project" id="accidents">
+            <div class="project-title">How Predictable Are Car Accidents in These U.S. Cities? <p
+                    class="project-description">This project aimed to find patterns in traffic accident data, both in
+                    terms of days of the week and severity of accidents, among six U.S. cities.</p>
+            </div>
+            <div class="project-image">
+                <a target="_blank" href="images/accidents.png">
+                    <img src="images/accidents.png" alt="Accidents" width="100%">
+                </a>
+            </div>
+        </div>
+        <div class="project" id="calls">
+            <div class="alt-project-title">How Did Quarantine Affect 311 Calls?<p class="alt-project-description"> I
+                    visualized three types of complaints that the NYPD received during the last two years: residential
+                    noise complaints, street/sidewalk noise complaints, and non-emergency police matters, demonstrating
+                    a spike due to the first COVID19 lockdowns.</p>
+            </div>
+            <div class="alt-project-image">
+                <a target="_blank" href="images/311.png">
+                    <img src="images/311_thumbnail.png" alt="Accidents" width="100%">
+                </a>
+            </div>
+        </div>
+        <div class="project" id="sweden">
+            <div class="project-title">Swedish Immigration Timeline<p class="alt-project-description">This timeline was
+                    created as part of the CGDV hackathon, and shows how immigration in Sweden has changed in
+                    correlation with certain laws.</p>
+            </div>
+            <div class="project-image">
+                <a target="_blank" href="images/refugee.png">
+                    <img src="images/refugee_thumbnail.png" alt="Refugee infographic" width="100%">
+                </a>
+            </div>
+        </div>
+        <div id="contact">Let's get in touch!
+            <p id="email">ripley.cleghorn@gmail.com</p>
+            <a target="_blank" href="https://github.com/ripleycleghorn">
+                <img src="images/github.png" alt="Github icon" width="3%">
             </a>
-          </p>
         </div>
-        <div class="img__wrap">
-          <img src="accidents.png" style="width:100%">
-          <p class="img__description">This graphic explores traffic accident patterns in six U.S. cities.
-            <img src="accidents.png" style="width:100%" onclick="onClick(this)">
-          </p>
-        </div>
-        <div class="img__wrap">
-          <img class="img__img" src="quipu.png" style="width:100%" alt="Quipu Project">
-          <p class="img__description">This infographic illustrates one of the objects from the Smithsonian, as part of
-            my Major Studio course.
-            <a href="https://ripleycleghorn.github.io/msdv-major-studio/assignment_01d/" target="_blank">
-              <img class="img__img" src="quipu.png" style="width:100%" alt="Quipu Project">
-            </a>
-          </p>
-        </div>
-        <div class="img__wrap">
-          <img src="nonvoters.png" style="width:100%">
-          <p class="img__description">This visualization outlines main reasons people have for not voting.
-            <a href="https://ripleycleghorn.github.io/msdv-info-aesthetics/assignment3/" target="_blank">
-              <img class="img__img" src="nonvoters.png" style="width:100%" alt="Nonvoters Project">
-            </a>
-          </p>
-        </div>
-        <!-- <div class="img__wrap">
-          <img src="tupelo1.png" style="width:100%">
-          <p class="img__description">This graphic was created for Tupelo Press, and illustrates the cycle of a book,
-            focusing on distribution by independent literary presses.
-            <img src="tupelo1.png" style="width:100%" onclick="onClick(this)">
-          </p>
-        </div> -->
-      </div>
-      <div class="w3-third">
-        <div class="img__wrap">
-          <img class="img__img" src="sally.png" style="width:100%" alt="Sally Ride">
-          <p class="img__description">The life of Sally Ride.
-            <a href="https://ripleycleghorn.github.io/msdv-major-studio/assignment_03a/" target="_blank">
-              <img class="img__img" src="sally.png" style="width:100%" alt="Sally Ride">
-            </a>
-          </p>
-        </div>
-        <div class="img__wrap">
-          <img src="311_thumbnail.png" style="width:100%">
-          <p class="img__description">This visualization explores the effect of quarantine on 311 noise-related calls
-            reported by the NYPD.
-            <img src="311.png" style="width:100%" onclick="onClick(this)">
-          </p>
-        </div>
-        <div class="img__wrap">
-          <img class="img__img" src="kepler.png" style="width:100%" alt="Internet subscription">
-          <p class="img__description">This chart highlights the lack of internet subscriptions among households across the northeast. (After opening the link, the data will take a few seconds to load). 
-            <a href="https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/s/5lcj0mpwnrmdll6/Internet%20Access%20Northeast.json" target="_blank">
-              <img class="img__img" src="kepler.png" style="width:100%" alt="Internet subscription">
-            </a>
-          </p>
-        </div>
-        <div class="img__wrap">
-          <img class="img__img" src="story.png" style="width:100%" alt="Abortion Access Project">
-          <p class="img__description">An interactive visualization exploring abortion access accross the United States.
-            <a href="https://ripleycleghorn.github.io/abortion_access/" target="_blank">
-              <img class="img__img" src="story.png" style="width:100%" alt="Abortion Access Project">
-            </a>
-          </p>
-        </div>
-        <!-- <div class="img__wrap">
-          <img class="img__img" src="earthquake.png" style="width:100%" alt="Earthquake project">
-          <p class="img__description">This chart was created in d3.js as part of my Information Aesthetics course. It is
-            intended for a young audience, as a way to introduce them to a bar chart.
-            <a href="https://ripleycleghorn.github.io/msdv-info-aesthetics/assignment2/" target="_blank">
-              <img class="img__img" src="earthquake.png" style="width:100%" alt="Earthquake project">
-            </a>
-          </p>
-        </div> -->
-      </div>
-
-      <div class="w3-third">
-        <div class="img__wrap">
-          <img class="img__img" src="refugee.png" style="width:100%">
-          <p class="img__description">This timeline was created as part of the CGDV hackathon.
-            <img class="img__img" src="refugee.png" style="width:100%" style="height:100%" onclick="onClick(this)">
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Pagination
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-    </div>
-  </div> -->
-
-    <!-- Modal for full size images on click-->
-    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-      <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
-      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-        <img id="img01" class="w3-image">
-        <p id="caption"></p>
-      </div>
-    </div>
-
-    <!-- About section -->
-    <div class="w3-container w3-center w3-text-light-grey w3-padding-32" id="about"
-      style="background: rgba(29, 106, 154, 0.72);">
-      <img src="me.jpeg" alt="Me" class="w3-image w3-padding-32" width="400" height="450">
-      <div class="w3-content w3-left-align" style="max-width:600px">
-        <h4 style="text-align: center;">About Me</h4>
-        <p style="hyphens: auto; width: 500px;">Ripley Cleghorn is a data visualization designer with a passion for complex storytelling and creating elegant
-          visuals. She combines analytical and design skills to bring data to life.
-        </p><br>
-        <p>Contact:</p>
-        <p>ripley.cleghorn@gmail.com</p>
-        <p><a href="https://github.com/ripleycleghorn" target="_blank">Github</a></p>
-      </div>
-
-      <!-- Footer -->
-      <footer class="w3-container w3-padding-32 w3-grey">
-        <h3>BLOG POSTS</h3>
-        <div class="w3-row-padding">
-          <div class="w3-third">
-            <ul class="w3-ul">
-              <li class="w3-padding-5">
-                <a
-                  href="https://medium.com/nightingale/why-you-should-close-the-computer-for-your-next-data-visualization-3636663d0b35">
-                  <img src="miles.png" class="w3-left w3-margin-right" style="width:100px">
-                  <div style="text-align: left; font-size: 17px; hyphens: auto;">Why You Should Close The Computer For Your Next Dataviz</div>
-                  <br>
-                  <!-- <span>And How To Unleash Creativity</span> -->
-              </li>
-            </ul>
-          </div>
-          <div class="w3-third">
-            <ul class="w3-ul">
-              <li class="w3-padding-5">
-                <a href="https://medium.com/nightingale/what-coronavirus-has-to-do-with-earth-day-e5708fb8a646">
-                  <img src="earthday.png" class="w3-left w3-margin-right" style="width:100px">
-                  <div style="text-align: left; font-size: 17px; hyphens: auto;">What Coronavirus Has to Do With Earth Day</div>
-                  <br>
-                  <!-- <span>Celebrating Earth Day doesn’t have to be divorced from the pressing global crisis we face. In
-                    fact, the two are uniquely intertwined.</span> -->
-              </li>
-            </ul>
-          </div>
-          <div class="w3-third">
-            <ul class="w3-ul">
-              <li class="w3-padding-5">
-                <a
-                  href="https://medium.com/nightingale/why-you-should-close-the-computer-for-your-next-data-visualization-3636663d0b35">
-                  <img src="panel.jpeg" class="w3-left w3-margin-right" style="width:100px">
-                  <div style="text-align: left; font-size: 17px; hyphens: auto;">Finding Comfort in Uncertainty</div>
-                  <br>
-                  <div style="text-align: left; font-size: 14px; hyphens: auto;">Reflections on a data visualization panel discussion</div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </footer>
-      <div class="w3-third w3-center">
-        <a href="https://twitter.com/ripley_cleghorn" target="_blank" class="fa fa-twitter"></a>
-        <a href="https://www.linkedin.com/in/ripley-cleghorn/" target="_blank" class="fa fa-linkedin"></a>
-      </div>
-      <!-- End page content -->
-    </div>
-
-    <script>
-      // Script to open and close sidebar
-      function w3_open() {
-        document.getElementById("mySidebar").style.display = "block";
-        document.getElementById("myOverlay").style.display = "block";
-      }
-
-      function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
-        document.getElementById("myOverlay").style.display = "none";
-      }
-
-      // Modal Image Gallery
-      function onClick(element) {
-        document.getElementById("img01").src = element.src;
-        document.getElementById("modal01").style.display = "block";
-        var captionText = document.getElementById("caption");
-        captionText.innerHTML = element.alt;
-      }
-
-    </script>
-
-
+    </main>
+    <script src="script.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
 </body>
 
 </html>
