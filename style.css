@@ -178,6 +178,17 @@ div {
     grid-row: 71 / span 10;
 }
 
+#top {
+    grid-column: 1 / span 8;
+    grid-row: 81 / span 3;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-left: 20px;
+    text-align: left;
+    color: grey;
+}
+
 #contact {
     grid-column: 1 / span 8;
     grid-row: 81 / span 3;
