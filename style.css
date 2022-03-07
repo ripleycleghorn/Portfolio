@@ -1,6 +1,6 @@
 main {
     display: grid;
-    grid-template-rows: repeat(82, 1fr);
+    grid-template-rows: repeat(113, 1fr);
     grid-template-columns: repeat(8, 1fr);
     /* background: linear-gradient(90deg, rgba(217,132,163,1) 35%, rgba(242,213,229,1) 100%); */
 }
@@ -27,20 +27,26 @@ div {
     font-weight: 500;
 } */
 
-#website-header, #static-header, #contact-header {
+#website-header, #static-header, #non-graduate-header, #contact-header {
     font-family: 'Playfair Display', serif;
     font-size: 18px;
     font-style: medium;
     color: #004878;
     text-align: center;
+    padding-top: 20px;
 }
 
 #website-header {
-    grid-column: 6 / span 1;
+    grid-column: 5 / span 1;
     grid-row: 1 / span 1;
 }
 
 #static-header {
+    grid-column: 6 / span 1;
+    grid-row: 1 / span 1;
+}
+
+#non-graduate-header {
     grid-column: 7 / span 1;
     grid-row: 1 / span 1;
 }
@@ -67,7 +73,7 @@ div {
     border-top: 1px dashed #004878;
 }
 
-#work-title {
+#graduate-work-title {
     grid-column: 1 / span 8;
     grid-row: 8 / span 1;
     font-family: 'Playfair Display', serif;
@@ -75,17 +81,12 @@ div {
     text-align: center;
 }
 
-#interactive, #static {
+#interactive, #static, #non-graduate {
     font-family: 'Playfair Display', serif;
     /* padding: 10px; */
     font-size: 20px;
     color: #004878;
     text-align: center;
-}
-
-#interactive{
-    grid-column: 1 / span 8;
-    grid-row: 9 / span 1;
 }
 
 .project {
@@ -136,7 +137,12 @@ div {
     box-shadow: 3px 5px 12px -2px #000000;
 }
 
-/* FIRST PROJECT */
+/* FIRST PROJECT, INTERACTIVE */
+
+#interactive{
+    grid-column: 1 / span 8;
+    grid-row: 9 / span 1;
+}
 
 #thesis {
     grid-column: 1 / span 8;
@@ -158,29 +164,61 @@ div {
     grid-row: 40 / span 10;
 }
 
+#contamination {
+    grid-column: 1 / span 8;
+    grid-row: 50 / span 10;
+}
+
+/* FIRST PROJECT, STATIC */
+
 #static {
     grid-column: 1 / span 8;
-    grid-row: 50 / span 1;
+    grid-row: 60 / span 1;
 }
 
 #accidents {
     grid-column: 1 / span 8;
-    grid-row: 51 / span 10;
+    grid-row: 61 / span 10;
 }
 
 #calls {
     grid-column: 1 / span 8;
-    grid-row: 61 / span 10;
+    grid-row: 71 / span 10;
+}
+
+/* FIRST PROJECT, NON-GRADUATE */
+
+#other-work-title {
+    grid-column: 1 / span 8;
+    grid-row: 81 / span 1;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* #non-graduate {
+    grid-column: 1 / span 8;
+    grid-row: 92 / span 1;
+} */
+
+#tupelo {
+    grid-column: 1 / span 8;
+    grid-row: 82 / span 10;
+}
+
+#abortion {
+    grid-column: 1 / span 8;
+    grid-row: 92 / span 10;
 }
 
 #sweden {
     grid-column: 1 / span 8;
-    grid-row: 71 / span 10;
+    grid-row: 102 / span 10;
 }
 
 #top {
     grid-column: 1 / span 8;
-    grid-row: 81 / span 3;
+    grid-row: 112 / span 3;
     font-family: 'Playfair Display', serif;
     font-size: 20px;
     padding-top: 15px;
@@ -191,7 +229,7 @@ div {
 
 #contact {
     grid-column: 1 / span 8;
-    grid-row: 81 / span 3;
+    grid-row: 112 / span 3;
     font-family: 'Playfair Display', serif;
     font-size: 30px;
     padding-top: 15px;
