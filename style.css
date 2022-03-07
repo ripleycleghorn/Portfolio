@@ -113,8 +113,8 @@ div {
 .project-image {
     grid-column: 1 / span 5;
     grid-row: 3 / span 3;
-    -webkit-box-shadow: -3px 5px 12px -2px #000000; 
-    box-shadow: -3px 5px 12px -2px #000000;
+    -webkit-box-shadow: 3px 5px 12px -2px #000000; 
+    box-shadow: 3px 5px 12px -2px #000000;
 }
 
 .alt-project-title {
@@ -133,8 +133,8 @@ div {
 .alt-project-image {
     grid-column: 4 / span 5;
     grid-row: 3 / span 3;
-    -webkit-box-shadow: 3px 5px 12px -2px #000000; 
-    box-shadow: 3px 5px 12px -2px #000000;
+    -webkit-box-shadow: -3px 5px 12px -2px #000000; 
+    box-shadow: -3px 5px 12px -2px #000000;
 }
 
 /* FIRST PROJECT, INTERACTIVE */
